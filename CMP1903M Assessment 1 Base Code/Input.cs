@@ -10,7 +10,7 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         //Handles the text input for Assessment 1
         string text = "";
-        
+
         //Method: manualTextInput
         //Arguments: none
         //Returns: string
@@ -44,7 +44,21 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from a .txt file
         public string fileTextInput(string fileName)
         {
+            while (true)
+            {
+                Console.WriteLine("Please enter the full file path of the text file you wish to analyse");
+                string path = Console.ReadLine();
+                try
+                {
+                    string text = File.ReadAllText(path);
+                    return text;
+                }
 
+                catch (Exception)
+                {
+                    Console.WriteLine("Invalid input, please try again...");
+                }
+            }
             return text;
         }
 

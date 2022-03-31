@@ -19,6 +19,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             //Get either manually entered text, or text from a file
             while (true)
             {
+                //Console askes user which method of analyse they wish to use
                 Console.WriteLine("Welcome to my text analysis tool, please select an option below");
                 Console.WriteLine("1 - Manualy enter text for analysis");
                 Console.WriteLine("2 - upload text from a file for analysis");
@@ -42,19 +43,10 @@ namespace CMP1903M_Assessment_1_Base_Code
             Analyse analyse = new Analyse();
             parameters = analyse.analyseText(text);
 
-            //Receive a list of integers back
-
-
             //Report the results of the analysis
             Report report = new Report();
             report.reportText(parameters);
-
-            //TO ADD: Get the frequency of individual letters?
-
-
         }
-        
-        
-    
+
     }
 }
